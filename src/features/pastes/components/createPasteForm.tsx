@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useCreatePaste } from "../hooks/useCreatePaste";
+import { useAuthStore } from "../../auth/store/authStore";
 
 const CreatePasteForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const createPasteMutation = useCreatePaste();
+  const user_id = useAuthStore((s) => s.user!.id);
 
-  const createPaste = (e: React.FormEvent) => {
+  const createPaste = (e: React.SubmitEvent) => {
     e.preventDefault();
 
     createPasteMutation.mutate(
-      { title, content },
+      { title, content, user_id },
       {
         onSuccess: () => {
           setTitle("");
