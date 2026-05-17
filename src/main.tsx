@@ -14,6 +14,7 @@ import {
   subscribeToAuthChanges,
 } from "./features/auth/authListener.ts";
 import ProtectedRoute from "./routes/ProtectedRoutes.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "signup",
     element: <Signup />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
   {
     element: <ProtectedRoute />,
