@@ -33,7 +33,7 @@ A modern full-stack paste sharing application built with **React, Supabase, Zust
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/devpaste.git
+git clone https://github.com/shalomshahzad33/devpaste.git
 cd devpaste
 npm install
 npm run dev
