@@ -86,7 +86,7 @@ src/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/ShalomShahzad33/DevPaste.git
+git clone https://github.com/your-username/devpaste.git
 cd devpaste
 npm install
 npm run dev
