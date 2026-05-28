@@ -9,7 +9,7 @@ export const signUpWithEmailAndPassword = async ({
     email,
     password,
     options: {
-      emailRedirectTo: "https://dev-paste.vercel.app/paste",
+      emailRedirectTo: "https://shalomdevpaste.vercel.app/paste",
     },
   });
   if (error) throw new Error(error.message);
@@ -20,7 +20,7 @@ export const signInWithGithub = async () => {
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider: "github",
     options: {
-      redirectTo: "https://dev-paste.vercel.app/paste",
+      redirectTo: "https://shalomdevpaste.vercel.app/paste",
     },
   });
   if (error) throw new Error(error.message);
